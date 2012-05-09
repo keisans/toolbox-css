@@ -1,0 +1,126 @@
+//File: core.less
+//Package: toolbox.less
+//Core styles to be used on basic elements
+
+h1, h2, h3, h4, h5, h6{
+	font-family: @header_font;
+	line-height: @lh;
+	color: @header_color;
+}
+
+p, a, li, div{
+	.type_size(@type_system, @size_p);
+	font-family: @text_font;
+	line-height: @lh;
+	color: @text_color;
+}
+
+pre, code{
+	font-family: @code_font;
+}
+
+.accent_text{
+	font-family: @accent_font;
+	color: @accent_text_color;
+}
+
+.accent_color{
+	color: @accent_text_color;
+}
+
+.accent_font{
+	font-family: @accent_font;
+}
+
+h1{
+	.type_size(@type_system, @size_h1);
+	margin: 0;
+	font-weight: bold;
+}
+
+h2{
+	.type_size(@type_system, @size_h2);
+	margin: 0;
+	font-weight: bold;
+}
+
+h3{
+	.type_size(@type_system, @size_h3);
+	margin: 0;
+	font-weight: bold;
+}
+
+h4{
+	.type_size(@type_system, @size_h4);
+	margin: 0;
+	font-weight: bold;
+}
+
+h5{
+	.type_size(@type_system, @size_h5);
+	margin: 0;
+	font-weight: bold;
+	font-style: italic;
+}
+
+h6{
+	.type_size(@type_system, @size_h6);
+	margin: 0;
+	text-transform: uppercase;
+}
+
+a{
+	color: @link_color;
+}
+
+a:hover{
+	color: @link_hover;
+}
+
+abbr[title]{
+	border-bottom: 1px dotted @grey;
+	cursor: default;
+}
+
+abbr.small_caps{
+	font-size: 90%;
+	text-transform: uppercase;
+}
+
+ul, ol{
+	margin: 0 0 1em 1em;
+	padding: 0;
+	list-style-position: inside;
+}
+
+ul ul, ol ul, ul ol, ol ol{
+	margin-bottom: 0;
+}
+
+ol.unstyled,
+ul.unstyled{
+	margin-left: 0;
+	list-style: none;
+}
+
+dt{
+	font-weight: bold;
+}
+
+dd{
+	margin-left: 1em;
+}
+
+.dl-horizontal dt{
+	float: left;
+	width: 120px;
+	overflow: hidden;
+	clear: left;
+	text-align: right;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dl-horizontal dd{
+	margin-left: 130px;
+}

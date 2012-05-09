@@ -1,0 +1,110 @@
+//File: vars.less
+//Package: toolbox.less
+//Define global variables to be used through the site
+
+//Font Imports
+//Note: For this to work, it must follow the format @import url("[source url].css");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300.css");
+
+//Font Stacks
+@serif: 'Georgia', 'Times New Roman', 'Times', serif;
+@sans: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+@accent_font: "Open Sans Condensed", "Myriad Web Pro", "Myriad Pro", Myriad, sans-serif;
+
+//Applied fonts
+@header_font: @sans;
+@text_font: @sans;
+@code_font: @mono;
+
+//Font Colors
+@header_color: @black;
+@text_color: @black;
+@accent_text_color: @dbRed;
+
+//Font sizes
+//The there are 2 systems available for sizing fonts, units and scale. The default is units in which the unit specified
+//(size_p, etc) is applied as the font size for that element. The alternative is setting @type_system: scale; and going into
+//core.less and changing the parameters of the .type_size mixins to .type_size(@type_system, @base_scale, @header_3_scale), etc.
+//You will most likely just want to stick with the default.
+
+//Type System
+@type_system: unit;
+
+//Line heights & baseline grid
+@lh: 1.5;
+@baseline: @size_p * @lh;
+
+//Font Units
+@size_p: 1em;
+@size_h6: 1em;
+@size_h5: 1em;
+@size_h4: 1em;
+@size_h3: 1.25em;
+@size_h2: 1.5em;
+@size_h1: 2em;
+
+//Font scale (use with caution, use of this system requires changing the @type_system var and core.less)
+//Quick explanation: this is based on Robert Binghurst's amazing "The Elements of Typographic Style" in order to keep a consistent
+//scale and rhythm across the type. Each size is based on its proximity to the base scale, for instance the h3 size is 21/13 em.
+//The scale in use right now is a stranded 3:5 fibonacci scale (1,2,3,4,5,6,8,10,13,16,21,26,34,42,55,68) so the next scale is 42.
+@base_scale: 13;
+@header3_scale: 21;
+@header2_scale: 26;
+@header1_scale: 34;
+
+//Colors
+@red:               #9d261d;
+@orange:            #f89406;
+@yellow:            #ffc40d;
+@green:             #46a546;
+@blue:              #049cdb;
+@purple:            #7a43b6;
+@grey:              #555;
+@black:             #000;
+@white:             #fff;
+@dbRed:             #C60B21;
+
+//Links
+@link_color: darken(@blue, 10%);
+@link_hover: @blue;
+
+//Buttons
+@button_bg: @white;
+@button_hover_bg: darken(@white, 10%);
+@button_border: #ccc;
+
+@button_db_bg:                  @dbRed;
+@button_db_bg_hover:            darken(@dbRed, 15%);
+@button_primary_bg:             @blue;
+@button_primary_bg_hover:       darken(@blue, 10%);
+@button_warning_bg:             @yellow;
+@button_warning_bg_hover:       darken(@yellow, 10%);
+@button_danger_bg:              @red;
+@button_danger_bg_hover:        darken(@red, 10%);
+@button_success_bg:             @green;
+@button_success_bg_hover:       darken(@green, 10%);
+@button_info_bg:                spin(@blue, 10%);
+@button_info_bg_hover:          darken(spin(@blue, 10%), 10%);
+@button_inverse_bg:             lighten(@black, 20%);
+@button_inverse_bg_hover:       lighten(@black, 10%);
+
+//Tables
+@table_background: @white;
+@table_border: @grey;
+@table_accent: darken(@white, 10%);
+@table_highlight: lighten(@green, 20%);
+
+//Grid
+@num_columns: 12;
+
+//Mobile & Tablet
+@grid_fluid_padding: 2%;
+
+//Desktop
+@grid_static_col_width: 60px;
+@grid_static_gutter_width: 20px;
+
+//XL
+@grid_xl_col_width: 80px;
+@grid_xl_gutter_width: 20px;

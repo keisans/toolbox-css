@@ -1,0 +1,50 @@
+//File: patch.less
+//Package: style.less
+//Patch is a development file meant to quickly test styles on a page, this should not be used in production
+.patch_block_test{
+	display: block;
+	padding: 5px 0;
+}
+
+.patch_block_test:hover{
+	background-color: lighten(@yellow, 30%);
+}
+
+.patch_block_test div{
+	display: block;
+	height: 1.8em;
+	background-color: @grey;
+	text-align: center;
+	color: @white;
+	line-height: 1.8em;
+	border-radius: 3px;
+}
+
+.patch_block_test div:hover{
+	background-color: @blue;
+}
+
+@media screen and (max-width: 759px){
+	.patch_block_test div{
+		margin-top: 10px;
+	}
+}
+
+.accent_text{
+	text-transform: uppercase;
+}
+
+.patch_mobile_override_col3{
+	color: red;
+	#grid > .fluid(override, @num_columns, 2%, 3);
+}
+
+@media screen and (min-width: 760px){
+	.patch_fluid{
+		margin-right: 20px;
+	}
+}
+
+.container{
+	margin-top: 1em;
+}

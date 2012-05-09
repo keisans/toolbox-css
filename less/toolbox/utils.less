@@ -1,0 +1,36 @@
+//File: utils.less
+//Package: toolbox.less
+//Utility classes to be used throughout the site
+
+.is_hidden{
+	display: none;
+	visibility: hidden;
+}
+
+.quick_left{
+	float: left;
+}
+
+.quick_right{
+	float: right;
+}
+
+.visible-phone     { display: none !important; }
+.visible-tablet    { display: none !important; }
+.visible-desktop   { } // Don't set initially
+.hidden-phone      { }
+.hidden-tablet     { }
+.hidden-desktop    { display: none !important; }
+@media screen and (max-width: 759px){
+	.visible-phone { display: inherit !important;}
+	.hidden-phone{ diplay: none !important; }
+	.hidden-desktop { display: inherit !important; }
+	.visible-desktop { display: none !important; }
+}
+
+@media screen and (min-width: 760px) and (max-width: 959px){
+	.visible-tablet { display: inherit !important; }
+	.hidden-tablet { display: none !important; }
+	.hidden-desktop { display: inherit !important; }
+	.visible-desktop  {display: none !important; }
+}

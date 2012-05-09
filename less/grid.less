@@ -1,0 +1,20 @@
+//File: grid.less
+//Package: styles.less
+//The grid system for the site
+
+@media screen and (max-width: 759px){
+	#grid > .fluid(mobile, @num_columns, @grid_fluid_padding);
+}
+
+@media screen and (min-width: 760px) and (max-width: 959px){
+	#grid > .fluid(tablet, @num_columns, @grid_fluid_padding);
+}
+
+@media screen and (min-width: 960px){
+	#grid > .static(@num_columns, @grid_static_col_width, @grid_static_gutter_width);
+
+}
+
+@media screen and (min-width: 1260px){
+	#grid > .static(@num_columns, @grid_xl_col_width, @grid_xl_gutter_width);
+}
