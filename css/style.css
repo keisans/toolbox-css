@@ -1,4 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300.css");
 .clearfix {
   *zoom: 1;
 }
@@ -480,14 +479,14 @@ code {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 .accent_text {
-  font-family: "Open Sans Condensed", "Myriad Web Pro", "Myriad Pro", Myriad, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   color: #c60b21;
 }
 .accent_color {
   color: #c60b21;
 }
 .accent_font {
-  font-family: "Open Sans Condensed", "Myriad Web Pro", "Myriad Pro", Myriad, sans-serif;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 h1 {
   font-size: 2em;
