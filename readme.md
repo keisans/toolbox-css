@@ -9,6 +9,10 @@ Toolbox is a framework that tries to grab some of the best features of [Bootstra
 * Clear out the style guide markup in index.html
 * Get coding!
 
+## Resources
+
+Source: `https://github.com/keisans/toolbox-css`
+Bug Reporting: `https://github.com/keisans/toolbox-css/issues`
 
 ## License
 
