@@ -1,56 +1,53 @@
 /*global module:false*/
 module.exports = function(grunt) {
-    var files = {
-      corelibs: {
-        Underscore: {active: true, path: 'libs/underscore.js'},
-        Backbone: {active: false, path: 'libs/backbone.js'},
-        Handlebars: {active: true, path: 'libs/handlebars.js'},
-        Prettyprint: {active: true, path: 'libs/google-code-prettify/prettify.js'}
-      },
+  var config = grunt.file.readJSON('config.json');
 
-      custom: [
-        'js/script.js'
-      ],
-
-      dict: function(){
-        var ret = [];
-        for(var lib in this.corelibs){
-          if(this.corelibs.hasOwnProperty(lib)){
-            if(this.corelibs[lib].active){
-              ret.push(this.corelibs[lib].path);
-            }
+  var libs = function() {
+      var ret = [];
+      for (var lib in config.corelibs) {
+        if (config.corelibs.hasOwnProperty(lib)) {
+          if (config.corelibs[lib].active) {
+            ret.push(config.corelibs[lib].path);
           }
         }
-        ret.concat(this.custom);
-        return ret;
       }
-  };
+      return ret;
+    };
   // Project configuration.
   grunt.initConfig({
+    opt: config,
     meta: {
       version: '0.1.0',
-      banner: '/*! DB Toolbox Rebrand - v<%= meta.version %> - ' +
+      banner: '/*! <%= opt.project_name %> - v<%= meta.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
         '* http://www.digitalbungalow.com/\n' +
         '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
         'Ryan Struhl; Licensed MIT */'
     },
     lint: {
-      files: ['grunt.js']
+      files: ['grunt.js', 'src/**/*.js']
     },
     qunit: {
       files: ['test/**/*.html']
     },
     concat: {
       dist: {
-        src: ['<banner:meta.banner>'].concat(files.dict()),
-        dest: 'dist/FILE_NAME.js'
+        src: ['<banner:meta.banner>'].concat(libs()),
+        dest: 'dist/libs.js'
+      },
+      custom: {
+        src: ['<banner:meta.banner>'].concat(config.custom),
+        dest: 'dist/<%= opt.project_name %>.js'
       }
     },
     min: {
       dist: {
         src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
-        dest: 'dist/FILE_NAME.min.js'
+        dest: 'dist/libs.min.js'
+      },
+      custom: {
+        src: ['<banner:meta.banner>', '<config:concat.custom.dest>'],
+        dest: 'dist/<%= opt.project_name %>.min.js'
       }
     },
     watch: {

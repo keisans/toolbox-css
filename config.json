@@ -1,0 +1,27 @@
+{
+	"project_name": "toolbox",
+
+	 "corelibs": {
+        "Underscore": {
+        	"active": true, 
+        	"path": "libs/underscore.js"
+        },
+        "Backbone": {
+        	"active": false, 
+        	"path": "libs/backbone.js"
+        },
+        "Handlebars": {
+        	"active": true, 
+        	"path": "libs/handlebars.js"
+        },
+        "Prettyprint": {
+        	"active": true, 
+        	"path": "libs/google-code-prettify/prettify.js"
+        }
+      },
+
+      "custom": [
+      	"src/script.js"
+      ]
+
+}
