@@ -50,9 +50,20 @@ module.exports = function(grunt) {
         dest: 'dist/<%= opt.project_name %>.min.js'
       }
     },
+    less: {
+      compile: {
+        files: {
+          'css/style.css': 'less/style.less'
+        },
+
+        options: {
+          paths: ['less', 'less/toolbox']
+        }
+      }
+    },
     watch: {
       files: '<config:lint.files>',
-      tasks: 'lint qunit concat'
+      tasks: 'lint qunit concat less'
     },
     jshint: {
       options: {
@@ -75,7 +86,8 @@ module.exports = function(grunt) {
     uglify: {}
   });
 
+  grunt.loadNpmTasks('grunt-contrib');
   // Default task.
-  grunt.registerTask('default', 'lint qunit concat min');
+  grunt.registerTask('default', 'lint qunit concat min less');
 
 };
