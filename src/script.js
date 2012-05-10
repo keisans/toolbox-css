@@ -2,6 +2,8 @@
 //Site specific javascript goes here
 
 //Demo Code/////////////////////////
+var $ = window.$;
+
 $(function(){
 	var titler = function titler(){
 		var target = $('.block_test div');
@@ -17,5 +19,14 @@ $(function(){
 	$(window).resize(function(){
 		titler();
 	});
+
+	if(window.prettyPrint && $('.prettyprint').length > 0){
+		window.yepnope({
+			load: 'libs/google-code-prettify/prettify.css',
+			callback: function(){
+				window.prettyPrint();
+			}
+		});
+	}
 });
 //End Demo Code/////////////////////
