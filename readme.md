@@ -27,3 +27,4 @@ Toolbox Framework is licenced under the MIT Licence [more info](http://en.wikipe
 * Underscore: MIT License
 * Backbone: MIT License
 * Handlebars: MIT License
+* HTML5 Boilerplate: MIT/GPL license
