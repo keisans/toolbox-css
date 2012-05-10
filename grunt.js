@@ -62,7 +62,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: '<config:lint.files>',
+      files: ['<config:lint.files>', 'less/**/*.less'],
       tasks: 'lint qunit concat less'
     },
     jshint: {
