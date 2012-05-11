@@ -22,7 +22,8 @@
 
       "custom": [
       	"src/loader.js",
-        "src/script.js"
+        "src/script.js",
+        "src/mq.js"
       ]
 
 }

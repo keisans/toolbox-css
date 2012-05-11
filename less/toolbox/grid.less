@@ -4,18 +4,35 @@
 
 @media screen and (max-width: 759px){
 	#grid > .fluid(mobile, @num_columns, @grid_fluid_padding);
+
+	body:after{
+		content: 'mobile';
+		display: none;
+	}
 }
 
 @media screen and (min-width: 760px) and (max-width: 959px){
 	#grid > .fluid(tablet, @num_columns, @grid_fluid_padding);
+	body:after{
+		content: 'tablet';
+		display: none;
+	}
 }
 
 @media screen and (min-width: 960px){
 	#grid > .static(@num_columns, @grid_static_col_width, @grid_static_gutter_width);
+	body:after{
+		content: 'desktop';
+		display: none;
+	}
 
 }
 
 @media screen and (min-width: 1260px){
 
 	#grid > .static(@num_columns, @grid_xl_col_width, @grid_xl_gutter_width);
+	body:after{
+		content: 'xl';
+		display: none;
+	}
 }

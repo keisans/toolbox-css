@@ -630,6 +630,10 @@ dd {
   .container:after {
     clear: both;
   }
+  body:after {
+    content: 'mobile';
+    display: none;
+  }
 }
 @media screen and (min-width: 760px) and (max-width: 959px) {
   .container {
@@ -720,6 +724,10 @@ dd {
   .col1 {
     width: 6.333333333333333%;
     *width: 5.833333333333333%;
+  }
+  body:after {
+    content: 'tablet';
+    display: none;
   }
 }
 @media screen and (min-width: 960px) {
@@ -815,6 +823,10 @@ dd {
   .offset1 {
     margin-left: 100px;
   }
+  body:after {
+    content: 'desktop';
+    display: none;
+  }
 }
 @media screen and (min-width: 1260px) {
   .row {
@@ -908,6 +920,10 @@ dd {
   }
   .offset1 {
     margin-left: 120px;
+  }
+  body:after {
+    content: 'xl';
+    display: none;
   }
 }
 table {
