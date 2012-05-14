@@ -1512,3 +1512,61 @@ input.neutral {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c60b21', endColorstr='#7e0715', GradientType=0);
 }
+@media screen and (max-width: 759px) {
+  
+}
+@media screen and (min-width: 760px) and (max-width: 959px) {
+  
+}
+@media screen and (min-width: 960px) {
+  
+}
+@media screen and (min-width: 1260px) {
+  
+}
+.patch_block_test {
+  display: block;
+  padding: 5px 0;
+}
+.patch_block_test:hover {
+  background-color: #ffe9a6;
+}
+.patch_block_test div {
+  display: block;
+  height: 1.8em;
+  background-color: #555555;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.8em;
+  border-radius: 3px;
+}
+.patch_block_test div:hover {
+  background-color: #049cdb;
+}
+@media screen and (max-width: 759px) {
+  .patch_block_test div {
+    margin-top: 10px;
+  }
+}
+.accent_text {
+  text-transform: uppercase;
+}
+.patch_mobile_override_col3 {
+  color: red;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 2%;
+  width: 22.995%;
+  *width: 22.995%;
+}
+@media screen and (min-width: 760px) {
+  .patch_fluid {
+    margin-right: 20px;
+  }
+}
+.container {
+  margin-top: 1em;
+}
