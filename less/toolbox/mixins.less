@@ -275,7 +275,35 @@
 
 //Grid
 #grid{
-	//Fixed with grid generator
+	.quickCol(xl, @columns: 1){
+    float: left;
+    margin-left: @grid_xl_gutter_width;
+    width: (@grid_xl_col_width * @columns) + (@grid_xl_gutter_Width * (@columns - 1));
+  }
+
+  .quickCol(desktop, @columns: 1){
+    float: left;
+    margin-left: @grid_static_gutter_width;
+    width: (@grid_static_col_width * @columns) + (@grid_static_gutter_Width * (@columns - 1));
+  }
+
+  .quickCol(tablet, @columns: 1){
+    @grid_col_width: ((100% - (@num_columns * @grid_fluid_padding)) / @num_columns);
+    float: left;
+    .box-sizing(border-box);
+    margin-left: @grid_fluid_padding;
+    width: (@grid_col_width * @columns) + (@grid_fluid_padding * (@columns - 1)) - (.5 / 100%);
+    *width: (@grid_col_width * @columns) + (@grid_fluid_padding * (@columns - 1)) - (.5 / 100%);
+  }
+
+  .quickCol(mobile, @columns: 1){
+    float: left;
+    width: 100%;
+    *width: 99.5%;
+    .box-sizing(border-box);
+  }
+
+  //Fixed with grid generator
 	.static (@grid_columns, @grid_col_width, @grid_gutter_width){
 		
 		.colX (@index) when (@index > 0){
@@ -287,6 +315,7 @@
 
 		.span(@columns){
 			width: (@grid_col_width * @columns) + (@grid_gutter_width * (@columns - 1));
+            margin-left: @grid_gutter_width;
 		}
 
 		.offsetX (@index) when (@index > 0){
@@ -307,7 +336,6 @@
 
 		.container [class*="col"]{
 			float: left;
-			margin-left: @grid_gutter_width;
 		}
 
 		.container {
@@ -389,15 +417,5 @@
 		.colX (@grid_columns);
 	}
 
-	.fluid(override, @grid_columns, @grid_gutter_width, @columns){
-		@grid_col_width: ((100% - (@grid_columns * @grid_gutter_width)) / @grid_columns);
-		@grid_row_width: (@grid_col_width * @grid_columns) + (@grid_gutter_width * @grid_columns);
-		float: left;
-		margin-left: @grid_gutter_width;
-		.box-sizing(border-box);
-		*margin-left: @grid_gutter_width - (.5 / @grid_row_width * 100 * 1%);
-		width: (@grid_col_width * @columns) + (@grid_gutter_width * (@columns - 1));
-		*width: (@grid_col_width * @columns) + (@grid_gutter_width * (@columns - 1)) - (.5 / @grid_row_width * 100 * 1%);
-	}
 }
 
