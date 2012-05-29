@@ -3,16 +3,16 @@
 //Utility classes to be used throughout the site
 
 .is_hidden{
-	display: none;
+	display: none !important;
 	visibility: hidden;
 }
 
 .quick_left{
-	float: left;
+	float: left !important;
 }
 
 .quick_right{
-	float: right;
+	float: right !important;
 }
 
 .visible-phone     { display: none !important; }
@@ -23,7 +23,7 @@
 .hidden-desktop    { display: none !important; }
 @media screen and (max-width: 759px){
 	.visible-phone { display: inherit !important;}
-	.hidden-phone{ diplay: none !important; }
+	.hidden-phone{ display: none !important; }
 	.hidden-desktop { display: inherit !important; }
 	.visible-desktop { display: none !important; }
 }
