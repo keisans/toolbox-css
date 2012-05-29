@@ -1455,14 +1455,14 @@ input.neutral {
   border: 1px solid #000000;
 }
 .is_hidden {
-  display: none;
+  display: none !important;
   visibility: hidden;
 }
 .quick_left {
-  float: left;
+  float: left !important;
 }
 .quick_right {
-  float: right;
+  float: right !important;
 }
 .visible-phone {
   display: none !important;
@@ -1478,7 +1478,7 @@ input.neutral {
     display: inherit !important;
   }
   .hidden-phone {
-    diplay: none !important;
+    display: none !important;
   }
   .hidden-desktop {
     display: inherit !important;
