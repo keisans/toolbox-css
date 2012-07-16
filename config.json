@@ -1,6 +1,8 @@
 {
 	"project_name": "toolbox",
 
+    "lint_js": true,
+
 	 "corelibs": {
                 "Underscore": {
                 	"active": true, 

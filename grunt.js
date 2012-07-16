@@ -13,6 +13,8 @@ module.exports = function(grunt) {
       }
       return ret;
     };
+
+    var lint = (config.lint_js)? ['grunt.js', 'src/**/*.js'] : [];
   // Project configuration.
   grunt.initConfig({
     opt: config,
@@ -25,7 +27,7 @@ module.exports = function(grunt) {
         'Ryan Struhl; Licensed MIT */'
     },
     lint: {
-      files: ['grunt.js', 'src/**/*.js']
+      files: lint
     },
     qunit: {
       files: ['test/**/*.html']
